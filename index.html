@@ -1,14 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Information Form</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
     <form enctype="multipart/form-data" action="index.html" method="get">
-        <!-- FORM FIELDS HERE -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" min="12">
+            <label for="birth-date">Date of Birth:</label>
+            <input type="date" name="birth-date" id="birth-date">
+        </fieldset>
+        <fieldset>
+            <legend>Preferences</legend>
+            <label for="favorite-color">Favorite Color:</label>
+            <input type="color" name="favorite-color" id="favorite-color">
+            <label for="Hobby">Hobby:</label>
+            <input type="text" list="hobby">
+            <datalist id="hobby">
+                <option value="drawing">Drawing</option>
+                <option value="swiming">Swiming</option>
+                <option value="dancing">Dancing</option>
+            </datalist>
+            <label for="experience-level">Experience Level:</label>
+            <input type="range" name="experience-level" id="experience-level" min="1" max="10">
+        </fieldset>
+        <fieldset>
+            <legend>Contact Preferences</legend>
+            <label for="method">Prefered Contact Method:</label>
+            <select name="method" id="method">
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+                <option value="mail">Mail</option>
+            </select>
+            <label for="subscribe">Subscribe to Newsletter</label>
+            <input type="checkbox" name="subscribe" id="subscribe">
+        </fieldset>
+        <fieldset>
+            <legend>Preferences</legend>
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="other">
+            <label for="other">Other</label>
+        </fieldset>
+        <fieldset>
+            <legend>More Information</legend>
+            <label for="bio">Bio:</label>
+            <textarea name="bio" id="bio" rows="5"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Upload Documents</legend>
+            <label for="files">Resume and other certificates:</label>
+            <input type="file" name="files" id="files" accept="doc,docx,pdf,jpg,png" multiple>
+        </fieldset>
+        <fieldset>
+            <legend>Submission</legend>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </fieldset>
     </form>
 </body>
+
 </html>

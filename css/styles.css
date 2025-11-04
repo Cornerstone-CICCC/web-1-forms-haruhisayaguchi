@@ -13,4 +13,24 @@ form {
   margin: 20px auto;
 }
 
+fieldset {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+#favorite-color {
+  width: 100%;
+}
+
+#experience-level {
+  width: 8rem;
+  accent-color: rgb(0, 85, 255);
+}
+
+button {
+  background-color: rgb(0, 85, 255);
+  color: white;
+}
+
 /*# sourceMappingURL=styles.css.map */
